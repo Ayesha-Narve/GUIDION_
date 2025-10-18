@@ -1,0 +1,81 @@
+/* Page Background */
+body {
+background: linear-gradient(135deg, #eafff3, #f6fff9);
+font-family: 'Poppins', sans-serif;
+color: #333;
+}
+
+/* Card Container */
+.registration-card {
+width: 600px;
+background-color: #fff;
+border-radius: 20px;
+ padding: 20px;           
+    margin: 20px 0;           
+    border-radius: 10px;      
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+
+
+
+/* Header */
+.registration-header {
+background: linear-gradient(90deg, #00b894, #00e676);
+border-radius: 20px;
+}
+
+.registration-header h3 {
+font-weight: 600;
+}
+
+.registration-header p {
+opacity: 0.9;
+}
+
+/* Buttons */
+.btn-success,
+.btn-outline-success {
+border-radius: 10px;
+transition: 0.3s ease;
+}
+
+.btn-success:hover,
+.btn-outline-success:hover {
+opacity: 0.9;
+transform: scale(1.03);
+}
+
+/* Gradient Link Text */
+.text-gradient {
+background: linear-gradient(90deg, #00b894, #00e676);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+/* Input and Validation */
+.form-control {
+border-radius: 10px;
+border: 1px solid #ccc;
+transition: all 0.3s;
+}
+
+.form-control:focus {
+border-color: #00b894;
+box-shadow: 0 0 6px rgba(0, 184, 148, 0.4);
+}
+
+.was-validated .form-control:invalid {
+border-color: #dc3545;
+}
+
+.was-validated .form-control:valid {
+border-color: #28a745;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+.registration-card {
+width: 95%;
+}
+}
