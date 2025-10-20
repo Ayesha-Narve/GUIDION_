@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Sample routes
 app.get('/', (req, res) => {
-    res.render('home'); // make sure views/home.ejs exists
+    res.render('includes/home'); // make sure views/home.ejs exists
 });
 
 app.get('/login', (req, res) => {

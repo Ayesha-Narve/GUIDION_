@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+
+    <title>Guidion</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><img src="assets/logo.png" alt=""> Guidion</div>
+    <ul class="nav-links">
+      <li><a href="#feature-section">Features</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="about-us">About Us</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a href="#cards" class="signin">Sign In</a>
+      <a href="#cards" class="get-started">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Connecting <span class="inst">Institutions</span>, <span class="prof">Professionals</span> & <span class="stud">Students</span></h1>
+      <p>
+        
+            <pre>
+Education deserves innovation — and that’s where Guidion leads.
+A platform where institutes discover talent, professionals inspire minds,
+and students gain future-ready skills.
+With blockchain-secured verification and transparent collaboration,
+Guidion is redefining how learning and expertise connect — creating 
+impact that lasts beyond classrooms.
+It transforms traditional education into a space of opportunity, 
+trust, and growth.
+Because at Guidion, every connection sparks a new possibility to 
+learn and inspire.
+            </pre>
+           </p>
+        
+      
+        <!-- <div class="badge">
+          <span class="badge-icon">🛡️</span>
+          <span class="badge-text">Blockchain-Powered Certification</span>
+        </div> -->
+        <div class="badge">
+  <span class="badge-icon">🛡️</span>
+  <span class="badge-text">Blockchain-Powered Certification</span>
+</div>
+
+      <div class="stats">
+        <div><h2>500+</h2><p>Expert Lecturers</p></div>
+        <div><h2>200+</h2><p>Institutions</p></div>
+        <div><h2>10k+</h2><p>Students Impacted</p></div>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="assets/classroom.png" alt="Lecture" />
+    </div>
+  </section>
+
+  <!--Container-->
+<!-- <section class="container">
+    <h2>Access Your Portal</h2>
+    <p>Choose your role to get started</p>
+
+    <div class="cards" id="cards">
+      
+      <div class="card institute">
+        <div class="icon">🏫</div>
+        <h3>Institute</h3>
+        <p>Manage your institution</p>
+        <hr style="border:none; height: 2px; background-color: #fff;">
+        <ul>
+          <li>Schedule Management</li>
+          <li>Lecturer & Student Control</li>
+          <li>Analytics & Insights</li>
+          <li>Reward Distribution</li>
+        </ul>
+        <button onclick="window.location.href='/isignup'">Login</button>
+      </div>
+
+       Lecturer 
+      <div class="card lecturer">
+        <div class="icon"><i class="fa-solid fa-book"></i></div>
+        <h3>Lecturer</h3>
+        <p>Conduct and track lectures </p>
+        <hr style="border:none; height: 2px; background-color: #fff;">
+        <ul>
+          <li>View Schedule</li>
+          <li>Generate QR Attendance</li>
+          <li>Feedback Analysis</li>
+          <li>Issue Certificates</li>
+        </ul>
+        <button onclick="window.location.href='/lsignup'"> Login</button>
+      </div>
+
+       Student 
+      <div class="card student">
+        <div class="icon">🎓</div>
+        <h3>Student</h3>
+        <p>Track your progress</p>
+        <hr style="border:none; height: 2px; background-color: #fff;">
+        <ul>
+          <li>View Lectures</li>
+          <li>Attendance History</li>
+          <li>Submit Feedback</li>
+          <li>Earn Rewards & Badges</li>
+        </ul>
+        <button onclick="window.location.href='/ssignup'">Login</button>
+      </div>
+    </div>
+  </section> -->
+ <section class="container">
+  <h2>Access Your Portal</h2>
+  <p>Choose your role to get started</p>
+
+  <div class="cards" id="cards">
+    <div class="card institute">
+      <div class="card-header">
+        <div class="icon">🏫</div>
+        <h3>Institute</h3>
+        <p>Manage your institution</p>
+      </div>
+      <ul>
+        <li>Schedule Management</li>
+        <li>Lecturer & Student Control</li>
+        <li>Analytics & Insights</li>
+        <li>Reward Distribution</li>
+      </ul>
+      <button class="institute-btn" onclick="window.location.href='/isignup'">Institute Login</button>
+    </div>
+
+    <div class="card lecturer">
+      <div class="card-header">
+        <div class="icon"><i class="fa-solid fa-book"></i></div>
+        <h3>Lecturer</h3>
+        <p>Conduct and track lectures</p>
+      </div>
+      <ul>
+        <li>View Schedule</li>
+        <li>Generate QR Attendance</li>
+        <li>Feedback Analysis</li>
+        <li>Issue Certificates</li>
+      </ul>
+      <button class="lecturer-btn" onclick="window.location.href='/lsignup'">Lecturer Login</button>
+    </div>
+
+    <div class="card student">
+      <div class="card-header">
+        <div class="icon">🎓</div>
+        <h3>Student</h3>
+        <p>Track your progress</p>
+      </div>
+      <ul>
+        <li>View Lectures</li>
+        <li>Attendance History</li>
+        <li>Submit Feedback</li>
+        <li>Earn Rewards & Badges</li>
+      </ul>
+      <button class="student-btn" onclick="window.location.href='/ssignup'">Student Login</button>
+    </div>
+  </div>
+</section>
+
+
+  <!--How it works-->
+  <section class="how-it-works" id="how-it-works">
+    <h2>How It Works</h2>
+    <p class="subtitle">Four simple steps to bring industry expertise into your classroom</p>
+
+    <div class="steps-container">
+      
+      <div class="step">
+        <div class="icon blue">
+          🔍
+        </div>
+        <h3>Browse Profiles</h3>
+        <p>Institutions explore verified guest lecturer profiles by expertise, industry, and availability.</p>
+      </div>
+
+      <div class="step">
+        <div class="icon green">
+          ✅
+        </div>
+        <h3>Select & Connect</h3>
+        <p>Choose the perfect match for your course and connect directly through our platform.</p>
+      </div>
+
+      <div class="step">
+        <div class="icon purple">
+          👥
+        </div>
+        <h3>Schedule Session</h3>
+        <p>Coordinate dates, topics, and logistics seamlessly within our booking system.</p>
+      </div>
+
+      <div class="step">
+        <div class="icon orange">
+          ⭐
+        </div>
+        <h3>Deliver Excellence</h3>
+        <p>Guest lecturers share their expertise while students gain invaluable industry insights.</p>
+      </div>
+    </div>
+  </section>
+
+<!--powerfull points-->
+
+  <section class="feature-section" id="feature-section">
+    <h1 class="feature-title">Powerful Features</h1>
+    <p class="feature-subtext">Everything you need for modern education management</p>
+
+    <div class="feature-grid">
+      <div class="feature-box">
+        <div class="feature-icon icon-analytics">📊</div>
+        <h3 class="feature-heading">Analytics</h3>
+        <p class="feature-desc">Real-time analytics and insights</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon icon-reward">🏅</div>
+        <h3 class="feature-heading">Rewards</h3>
+        <p class="feature-desc">Token-based reward system</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon icon-secure">🛡️</div>
+        <h3 class="feature-heading">Security</h3>
+        <p class="feature-desc">Blockchain certificates</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon icon-feedback">👥</div>
+        <h3 class="feature-heading">Feedback</h3>
+        <p class="feature-desc">Comprehensive feedback system</p>
+      </div>
+    </div>
+  </section>
+
+  <!--footer-->
+   <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-grid">
+
+        <!-- Logo & Description -->
+        <div class="footer-section">
+          <div class="footer-logo">
+            <div class="logo-icon"><img src="assets/logo.png" alt=""></div>
+            <span class="logo-text">Guidion</span>
+          </div>
+          <p class="footer-text">
+            Connecting educational institutions with industry-leading professionals 
+            to enhance student learning experiences.
+          </p>
+        </div>
+
+        <!-- Institutions Links -->
+        <div class="footer-section">
+          <h4>For Institutions</h4>
+          <ul>
+            <li><a href="#">Browse Lecturers</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+
+        <!-- Professionals Links -->
+        <div class="footer-section">
+          <h4>For Professionals</h4>
+          <ul>
+            <li><a href="#cards">Create Profile</a></li>
+            <li><a href="#">Guidelines</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul class="contact-list">
+            <li>📧 contact@lecturelink.com</li>
+            <li>📞 +1 (555) 123-4567</li>
+            <li>📍 San Francisco, CA</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; Guidion. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
