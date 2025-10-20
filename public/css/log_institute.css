@@ -1,0 +1,29 @@
+body {
+  background: linear-gradient(135deg, #eafff3, #f6fff9);
+}
+
+.header {
+  background: linear-gradient(90deg, #00b894, #00e676);
+}
+
+.header i {
+  color: #00b894;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #00b894;
+  box-shadow: 0 0 6px rgba(0, 184, 148, 0.4);
+}
+
+button {
+  background: linear-gradient(135deg, #00b894, #00e676);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #00e676, #00b894);
+}
+
+a {
+  color: #00b894;
+}

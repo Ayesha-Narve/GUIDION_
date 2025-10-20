@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecturer Login</title>
+  <link rel="stylesheet" href="/css/log_style.css">
+<link rel="stylesheet" href="/css/log_lecturer.css">
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <i>📘</i>
+      <h2>Lecturer Login</h2>
+      <p>Welcome back! Sign in to Guidion</p>
+    </div>
+
+    <form action="/lecturer/login" method="POST">
+      <label>Email Address</label>
+      <input type="email" name="email" placeholder="lecturer@university.edu" required>
+      
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Enter your password" required>
+
+      <a href="#" style="float:right; font-size: 13px;">Forgot Password?</a>
+      <button type="submit">Sign In</button>
+
+      <p>Don't have an account? <a href="/lecturer/signup">Sign up here</a></p>
+    </form>
+  </div>
+</body>
+</html>
