@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Institute Login</title>
+ <link rel="stylesheet" href="/css/log_style.css">
+<link rel="stylesheet" href="/css/log_institute.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <i>🏛️</i>
+      <h2>Institute Login</h2>
+      <p>Welcome back! Sign in to Guidion</p>
+    </div>
+
+    <form action="/institute/login" method="POST">
+      <label>Email Address</label>
+      <input type="email" name="email" placeholder="admin@institute.edu" required>
+      
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Enter your password" required>
+
+      <a href="#" style="float:right; font-size: 13px;">Forgot Password?</a>
+      <button type="submit">Sign In</button>
+
+      <p>Don't have an account? <a href="/institute/signup">Sign up here</a></p>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* Soft pastel background */
+body {
+  background: linear-gradient(135deg, #f8e9ff, #fff0f7);
+}
+
+/* Header with blue gradient */
+.header {
+  background: linear-gradient(90deg, #2e4df7, #5b8dfb);
+}
+
+/* Icon tint */
+.header i {
+  color: #2e4df7;
+}
+
+/* Input focus styling */
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #2e4df7;
+  box-shadow: 0 0 6px rgba(46, 77, 247, 0.4);
+}
+
+/* Button gradient & hover animation */
+button {
+  background: linear-gradient(90deg, #2e4df7, #5b8dfb);
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+  background: linear-gradient(90deg, #5b8dfb, #2e4df7);
+}
+
+/* Link color */
+a {
+  color: #2e4df7;
+}
