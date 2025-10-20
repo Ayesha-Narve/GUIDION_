@@ -83,24 +83,13 @@ body {
   font-size: 17px;
   font-weight: 400;
   color: #4a5568; 
-  /* soft grayish blue tone */
+  
   line-height: 1.6;
   letter-spacing: 0.2px;
-  /* white-space: pre-line;  */
-  /* keeps line breaks but removes extra spacing */
+  
 }
 
-/* .hero-text p pre{
-  font-size: 1rem;
-  line-height: 0.;
-  font-family: var(--bs-body-font-family);
-   margin-top: 1rem;
-  font-family: var(--bs-body-font-family);
-  color: #111;
-  font-weight: 200;
-  font-size: 2px;
 
-} */
 .hero-text .inst { color: #2266ff; }
 .hero-text .prof { color: #a020f0; }
 .hero-text .stud { color: #00aa44; }
