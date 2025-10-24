@@ -40,6 +40,21 @@ app.get('/isignup', (req, res) => {
     res.render('users/inst_signup'); 
 });
 
+//student login route
+app.get('/slogin', (req, res) => {
+    res.render('users/student-login'); // make sure views/login.ejs exists
+});
+
+//guest lecturer login route
+app.get('/llogin', (req, res) => {
+    res.render('users/lecturer-login'); 
+});
+
+//institute login route
+app.get('/ilogin', (req, res) => {
+    res.render('users/institute-login'); 
+});
+
 // Start server
 const PORT = 8080;
 app.listen(PORT, () => {
