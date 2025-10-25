@@ -54,6 +54,10 @@ app.get('/llogin', (req, res) => {
 app.get('/ilogin', (req, res) => {
     res.render('users/institute-login'); 
 });
+//about us page route
+app.get('/about', (req, res) => {
+    res.render('includes/about'); 
+});
 
 // Start server
 const PORT = 8080;
