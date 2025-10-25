@@ -145,30 +145,39 @@
   </section>
 
   <!-- Team Section -->
-  <section class="team-section" id="team">
-    <h2>👩‍💻 Meet Our Team</h2>
-    <div class="team-grid">
-      <% const teamMembers = [
+<section class="team-section" id="team">
+  <h2>👩‍💻 Meet Our Team</h2>
+  <div class="team-grid">
+    <% 
+      const teamMembers = [
         {name: 'Ayesha Narve', photo: 'ayesha.jpg', linkedin: 'https://www.linkedin.com/in/ayesha-narve-249a70308', github: 'https://github.com/Ayesha-Narve'},
         {name: 'Meghana Palle', photo: 'Meghana.jpg', linkedin: 'https://www.linkedin.com/in/meghana-palle-589a83315', github: 'https://github.com/meghanapalle33-pixel'},
         {name: 'Shubham More', photo: 'Shubham.jpg', linkedin: 'https://www.linkedin.com/in/shubh144', github: 'https://github.com/shubhh144'},
         {name: 'Abhin Masure', photo: 'Abhin.jpg', linkedin: 'https://www.linkedin.com/in/abhin-masure-64ba46299', github: 'https://github.com/Abhin-masure?tab=repositories'},
         {name: 'Sakshi Punde', photo: 'Sakshi.jpg', linkedin: 'https://www.linkedin.com/in/sakshi-punde-572217286', github: 'https://github.com/Sak-punde/Sak-punde'},
-        {name: 'Snehal Rananvare', photo: 'Snehal.jpg', linkedin: '#', github: '#'}
-      ]; %>
+        {name: 'Snehal Rananvare', photo: 'Snehal.jpg', linkedin: '', github: ''}
+      ];
+    %>
 
-      <% teamMembers.forEach(member => { %>
-        <div class="team-card">
-          <div class="team-photo" style="background-image: url('/images/<%= member.photo %>');"></div>
-          <h3><%= member.name %></h3>
-          <div class="social-icons">
-            <a href="<%= member.linkedin %>"><i class="fab fa-linkedin"></i></a>
-            <a href="<%= member.github %>"><i class="fab fa-github"></i></a>
-          </div>
+    <% for(let i = 0; i < teamMembers.length; i++) { 
+         let member = teamMembers[i]; %>
+      <div class="team-card">
+        <div class="team-photo" style="background-image: url('/assets/<%= member.photo %>');"></div>
+        <h3><%= member.name %></h3>
+        <div class="social-icons">
+          <% if(member.linkedin) { %>
+            <a href="<%= member.linkedin %>" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <% } %>
+          <% if(member.github) { %>
+            <a href="<%= member.github %>" target="_blank"><i class="fab fa-github"></i></a>
+          <% } %>
         </div>
-      <% }); %>
-    </div>
-  </section>
+      </div>
+    <% } %>
+  </div>
+</section>
+
+
 
   <!-- Footer -->
   <footer class="footer">
