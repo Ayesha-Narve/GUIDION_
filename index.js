@@ -59,6 +59,11 @@ app.get('/about', (req, res) => {
     res.render('includes/about'); 
 });
 
+// sidebar
+app.get('/sidebar', (req, res) => {
+    res.render('includes/sidebar'); 
+});
+
 // Start server
 const PORT = 8080;
 app.listen(PORT, () => {
