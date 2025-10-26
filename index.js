@@ -63,6 +63,10 @@ app.get('/about', (req, res) => {
 app.get('/sidebar', (req, res) => {
     res.render('includes/sidebar'); 
 });
+// reward
+app.get('/reward', (req, res) => {
+    res.render('dashboards/institute/reward'); 
+});
 
 // Start server
 const PORT = 8080;

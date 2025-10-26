@@ -14,6 +14,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -23,10 +24,14 @@ html {
   background-color: white;
   box-shadow: 0 1px 8px rgba(0,0,0,0.05);
 }
-.logo {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #333;
+.navbar ul li::before {
+  content: none !important;
+}
+.logo img {
+  height: 60px;
+  width: auto;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 .nav-links {
   list-style: none;
@@ -115,7 +120,7 @@ html {
     background-color: #fff;
     border-radius: 15px;
     padding: 25px 20px;
-    width: calc(50% - 15px); /* 2 per row on desktop */
+    width: calc(40% - 15px); /* 2 per row on desktop */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
@@ -260,90 +265,6 @@ html {
     }
 }
 
-
-/* Footer */
-.footer {
-  background-color: #111827;
-  color: #ccc;
-  padding: 50px 20px;
-}
-.footer-container {
-  max-width: 1100px;
-  margin: auto;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 30px;
-  margin-bottom: 40px;
-}
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-.logo-icon {
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
-  padding: 8px;
-  border-radius: 8px;
-  color: white;
-  font-size: 18px;
-}
-.logo-text {
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-}
-.footer-text {
-  font-size: 14px;
-  line-height: 1.6;
-}
-.footer-section h4 {
-  color: white;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-.footer-section ul li {
-  margin-bottom: 8px;
-}
-.footer-section a {
-  color: #ccc;
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s;
-}
-.footer-section a:hover {
-  color: #60a5fa;
-}
-.contact-list li {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.footer-bottom {
-  border-top: 1px solid #1f2937;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  font-size: 13px;
-}
-.footer-links a {
-  margin: 0 10px;
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.footer-links a:hover {
-  color: #60a5fa;
-}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
