@@ -159,6 +159,11 @@ html, body {
   font-size: 1.1rem;
 }
 
+.main-content {
+  margin-left: 260px;
+  padding: 40px;
+  flex-grow: 1;
+}
 /* ======= Responsive Design ======= */
 @media (max-width: 1000px) {
   .stats-grid {
