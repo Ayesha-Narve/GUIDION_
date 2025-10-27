@@ -6,45 +6,48 @@ body {
 }
 
 /* 1. Define the Sidebar Width (This must be correct) */
-.sidebar {
-    width: 260px;
+/* .sidebar {
+    width: 260px; */
     /* You likely still need position: fixed and a top/left setting 
        on your sidebar for it to stay put and be full height. 
        If it's already working, leave its CSS alone. */
-}
+/* } */
 
 /* 2. Style the Header (Navbar) to Offset and Constrain its Width */
-header {
+/* header { */
     /* Pushes the header element to the right, past the sidebar */
-    margin-left: 260px;
+    /* margin-left: 260px; */
     
     /* Calculates the new width: 100% of the viewport minus the sidebar width */
-    width: calc(100% - 260px);
+    /* width: calc(100% - 260px); */
     
     /* Ensures padding/borders are included in the calculated width */
-    box-sizing: border-box; 
+    /* box-sizing: border-box;  */
     
     /* If your navbar uses position: sticky/fixed, you must also apply the margin-left: */
     /* top: 0; */ 
     /* left: 260px; */ 
     /* width: calc(100% - 260px); */
+/* } */
+header {
+  position: fixed;      /* 👈 Makes navbar stay visible on scroll */
+  top: 0;
+  left: 260px;          /* 👈 Start after sidebar */
+  width: calc(100% - 260px);  /* 👈 Remaining width */
+  height: 5rem;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 999;         /* 👈 Keeps navbar above content */
+  box-sizing: border-box;
 }
 
-.footer {
-    /* Existing Styles are fine, but add the alignment rules: */
-    
-    /* Pushes the footer past the sidebar (260px) */
-    margin-left: 260px !important; 
-    
-    /* Constrains the total width to the remaining screen space */
-    width: calc(100% - 260px) !important; 
-    
-    box-sizing: border-box !important;
-    
-    /* ... rest of your existing footer styles ... */
+.main-content {
+    margin-top: 5rem;
 }
-
-
 .container {
     flex: 1;
 }
@@ -63,6 +66,7 @@ header {
   height: 60px;
   width: auto;
   margin-right: 8px;
+  margin-left: 300px;
   vertical-align: middle;
 }
 
