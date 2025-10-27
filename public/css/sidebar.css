@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  background: #f6f8fc;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: all 0.3s;
+}
+
+.institute-info {
+  text-align: center;
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  background: linear-gradient(90deg, #00b894, #00e676);
+  color: #fff;
+  border-radius: 0 0 12px 12px;
+}
+
+.institute-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+.institute-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.institute-desc {
+  font-size: 12px;
+  opacity: 0.9;
+  line-height: 1.2;
+}
+
+.edit-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.edit-btn:hover {
+  color: #00e676;
+}
+
+/* Menu styling */
+.menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  font-size: 15px;
+}
+
+.menu a i {
+  font-size: 18px;
+  margin-right: 12px;
+}
+
+.menu a:hover {
+  background: #f0f4ff;
+}
+
+.menu a.active {
+  background: linear-gradient(90deg, #00b894, #00e676);
+  color: #fff;
+}
+
+/* Logout */
+.logout {
+  padding: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.logout a {
+  text-decoration: none;
+  color: #e63946;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.logout a i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.logout a:hover {
+  color: #ff4d4d;
+}
+
+/* Main content */
+/* .main-content {
+  margin-left: 260px;
+  padding: 40px;
+  flex-grow: 1;
+} */

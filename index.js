@@ -51,12 +51,13 @@ app.get('/llogin', (req, res) => {
 });
 
 //institute login route
-app.get('/ilogin', (req, res) => {
+app.get('/ilogin', (req, res) => {node 
     res.render('users/institute-login'); 
 });
 //about us page route
 app.get('/about', (req, res) => {
     res.render('includes/about'); 
+
 });
 
 // sidebar
@@ -67,6 +68,10 @@ app.get('/sidebar', (req, res) => {
 app.get('/reward', (req, res) => {
     res.render('dashboards/institute/reward'); 
 });
+// Lect_detail
+app.get('/lect-detail', (req, res) => {
+    res.render('dashboards/institute/lect_detail'); 
+});
 
 app.get('/lectInfo', (req, res) => {
     res.render('dashboards/institute/lect_detail'); 
@@ -76,4 +81,9 @@ app.get('/lectInfo', (req, res) => {
 const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
+});
+
+// stud_detail
+app.get('/stud_detail', (req, res) => {
+    res.render('dashboards/institute/stud_detail'); 
 });

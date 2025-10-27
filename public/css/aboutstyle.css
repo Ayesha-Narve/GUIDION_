@@ -38,45 +38,57 @@ html {
   display: flex;
   gap: 1.5rem;
 }
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  position: relative;
 }
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #007bff;
+  left: 0;
+  bottom: -3px;
+  transition: width 0.3s;
+}
+.nav-links a:hover::after { width: 100%; }
 .nav-buttons a {
   margin-left: 1rem;
   text-decoration: none;
-  padding: 8px 14px;
+  padding: 8px 16px;
   border-radius: 8px;
+  transition: all 0.3s ease;
 }
-.signin {
-  border: 1px solid #ccc;
-  color: #333;
-}
+.signin { border: 1px solid #ccc; color: #333; }
+.signin:hover { background: #f0f0f0; }
 .get-started {
-  background-color: #0066ff;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
   color: white;
+  box-shadow: 0 0 10px rgba(0,123,255,0.5);
+}
+.get-started:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,123,255,0.8);
 }
 
 /* About Section */
 .about-section {
-    padding: 80px 50px;
-    text-align: center;
-    background-color: #f8f9fa;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  padding: 100px 40px;
+  text-align: center;
+  /*border-bottom: 50%;*/
+  border-bottom-left-radius: 90%;
+  border-bottom-right-radius: 90%;
+  border-end-end-radius: 40%;
 }
-.about-section h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-.about-section .highlight {
-    color: #007bff;
-}
-.about-section p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: auto;
-    color: #555;
-}
+.about-section h1 { font-size: 48px; margin-bottom: 20px; }
+.about-section p { max-width: 800px; margin: 0 auto 30px; font-size: 18px; }
+.highlight { color: #ffeb3b; }
 
 /* Mission Section */
 .mission-section {

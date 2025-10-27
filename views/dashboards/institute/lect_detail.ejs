@@ -1,0 +1,87 @@
+
+<% layout('/layouts/dashboard') %>
+
+<div class="main-container">
+  <%- include('../../includes/sidebar') %>
+
+  
+    <div class="dashboard-container">
+
+      <!-- Top Statistic Cards -->
+      <div class="stats-grid">
+        <a href="/institute/completed" class="stat-card blue">
+          <div class="icon"><i class="ri-check-double-line"></i></div>
+          <h2>24</h2>
+          <p>Completed</p>
+        </a>
+
+        <a href="/institute/requests" class="stat-card green">
+          <div class="icon"><i class="ri-mail-send-line"></i></div>
+          <h2>22</h2>
+          <p>Requests</p>
+        </a>
+
+        <a href="/institute/scheduled" class="stat-card yellow">
+          <div class="icon"><i class="ri-calendar-check-line"></i></div>
+          <h2>2</h2>
+          <p>Scheduled</p>
+        </a>
+
+        <a href="/institute/topics" class="stat-card purple">
+          <div class="icon"><i class="ri-book-open-line"></i></div>
+          <h2>4</h2>
+          <p>Topics</p>
+        </a>
+      </div>
+
+      <!-- Lecturer Ranking Leaderboard -->
+      <h2 class="table-title">Lecturer Ranking Leaderboard</h2>
+
+      <!-- Lecturer Table -->
+      <div class="table-container ">
+        <table class="styled-table">
+          <thead >
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Topic</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1</td>
+              <td>Dr. Sarah Johnson</td>
+              <td>Computer Science</td>
+              <td>Data Structures</td>
+              <td><span class="stars">⭐⭐⭐⭐⭐</span> 4.9</td>
+            </tr>
+            <tr>
+              <td>#2</td>
+              <td>Prof. Mike Chen</td>
+              <td>AI & ML</td>
+              <td>Neural Networks</td>
+              <td><span class="stars">⭐⭐⭐⭐</span> 4.8</td>
+            </tr>
+            <tr>
+              <td>#3</td>
+              <td>Dr. Emily White</td>
+              <td>Web Technologies</td>
+              <td>React Framework</td>
+              <td><span class="stars">⭐⭐⭐⭐</span> 4.7</td>
+            </tr>
+            <tr>
+              <td>#4</td>
+              <td>Dr. James Brown</td>
+              <td>Data Science</td>
+              <td>Machine Learning</td>
+              <td><span class="stars">⭐⭐⭐</span> 4.5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  
+</div>

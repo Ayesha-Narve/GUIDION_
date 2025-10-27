@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Average Attendance - Guidion</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <h1>Completed Lectures & Attendance Overview</h1>
+      <a href="/dashboard" class="back-btn">← Back to Dashboard</a>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Lecture Topic</th>
+          <th>Date</th>
+          <th>Total Students</th>
+          <th>Attended</th>
+          <th>Attendance %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (lectures && lectures.length > 0) { %>
+          <% lectures.forEach(lecture => { %>
+            <tr>
+              <td><%= lecture.topic %></td>
+              <td><%= lecture.date %></td>
+              <td><%= lecture.totalStudents %></td>
+              <td><%= lecture.attended %></td>
+              <td><%= lecture.attendancePercent %></td>
+            </tr>
+          <% }) %>
+        <% } else { %>
+          <tr>
+            <td colspan="5">No lecture records available.</td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
