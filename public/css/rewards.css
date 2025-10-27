@@ -9,6 +9,7 @@ body {
 .container {
   max-width: 1200px;
   margin: auto;
+  overflow: scroll;
 }
 
 .header-section {
