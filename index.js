@@ -68,6 +68,10 @@ app.get('/reward', (req, res) => {
     res.render('dashboards/institute/reward'); 
 });
 
+app.get('/lectInfo', (req, res) => {
+    res.render('dashboards/institute/lect_detail'); 
+});
+
 // Start server
 const PORT = 8080;
 app.listen(PORT, () => {
