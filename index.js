@@ -51,7 +51,7 @@ app.get('/llogin', (req, res) => {
 });
 
 //institute login route
-app.get('/ilogin', (req, res) => {
+app.get('/ilogin', (req, res) => {node 
     res.render('users/institute-login'); 
 });
 //about us page route
@@ -80,6 +80,6 @@ app.listen(PORT, () => {
 });
 
 // stud_detail
-app.get('/stud-detail', (req, res) => {
+app.get('/stud_detail', (req, res) => {
     res.render('dashboards/institute/stud_detail'); 
 });
