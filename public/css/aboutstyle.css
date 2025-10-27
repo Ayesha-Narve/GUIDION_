@@ -21,14 +21,6 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 4rem;
-<<<<<<< HEAD
-  background: rgba(255,255,255,0.9);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  backdrop-filter: blur(10px);
-=======
   background-color: white;
   box-shadow: 0 1px 8px rgba(0,0,0,0.05);
 }
@@ -45,7 +37,6 @@ html {
   list-style: none;
   display: flex;
   gap: 1.5rem;
->>>>>>> ea9f04180655c6a567e748d3d9805444801e71c3
 }
 .nav-links { display: flex; gap: 1.5rem; list-style: none; }
 .nav-links a {

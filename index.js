@@ -57,6 +57,7 @@ app.get('/ilogin', (req, res) => {
 //about us page route
 app.get('/about', (req, res) => {
     res.render('includes/about'); 
+
 });
 
 // sidebar
@@ -66,6 +67,10 @@ app.get('/sidebar', (req, res) => {
 // reward
 app.get('/reward', (req, res) => {
     res.render('dashboards/institute/reward'); 
+});
+// Lect_detail
+app.get('/lect-detail', (req, res) => {
+    res.render('dashboards/institute/lect_detail'); 
 });
 
 // Start server
