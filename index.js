@@ -78,3 +78,8 @@ const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
+
+// stud_detail
+app.get('/stud-detail', (req, res) => {
+    res.render('dashboards/institute/stud_detail'); 
+});
