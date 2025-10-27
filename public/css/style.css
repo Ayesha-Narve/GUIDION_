@@ -3,6 +3,8 @@ body {
   display: flex;
     flex-direction: column;
     min-height: 100vh;
+    scroll-behavior: smooth;
+    scrollbar-width: 100px;
 }
 
 /* 1. Define the Sidebar Width (This must be correct) */
@@ -34,6 +36,14 @@ header {
   top: 0;
   left: 260px;          /* 👈 Start after sidebar */
   width: calc(100% - 260px);  /* 👈 Remaining width */
+       /* If it's already working, leave its CSS alone.  */
+}
+
+/* 2. Style the Header (Navbar) to Offset and Constrain its Width */
+ header {
+  position: fixed;     
+  left: 0;  
+  right: 0;        
   height: 5rem;
   background-color: white;
   border-bottom: 1px solid #e5e7eb;
@@ -50,9 +60,20 @@ header {
 }
 .container {
     flex: 1;
-}
+
+  z-index: 999;        
+  box-sizing: border-box;
+} 
+
+
  /* navbar styling */
  .navbar {
+  scroll-padding: 500px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  overflow: hidden;
     width: 100%;
     height: 5rem;
     background-color: white;;
