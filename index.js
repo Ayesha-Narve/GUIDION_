@@ -51,7 +51,7 @@ app.get('/llogin', (req, res) => {
 });
 
 //institute login route
-app.get('/ilogin', (req, res) => {node 
+app.get('/ilogin', (req, res) => { 
     res.render('users/institute-login'); 
 });
 //about us page route

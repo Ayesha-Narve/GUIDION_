@@ -10,7 +10,10 @@ body {
 .container {
   max-width: 1200px;
   margin: auto;
-  overflow: scroll;
+
+}
+.main-content {
+  margin-top: 60px!important;
 }
 
 .header-section {
