@@ -73,8 +73,27 @@ app.get('/lect-detail', (req, res) => {
     res.render('dashboards/institute/lect_detail'); 
 });
 
-app.get('/lectInfo', (req, res) => {
-    res.render('dashboards/institute/lect_detail'); 
+// instituite stud_detail
+app.get('/stud_detail', (req, res) => {
+    res.render('dashboards/institute/stud_detail'); 
+});
+// instituite stud_detail in total student
+app.get('/inst_students', (req, res) => {
+    res.render('dashboards/institute/student'); 
+});
+// instituite stud_detail in attendence section
+app.get('/stud_attendance', (req, res) => {
+    res.render('dashboards/institute/attendance'); 
+});
+
+// instituite stud_detail in student reward section
+app.get('/stud_rewards', (req, res) => {
+    res.render('dashboards/institute/stud_rewards'); 
+});
+
+// instituite stud_detail in topic poll section
+app.get('/stud_topicpoll', (req, res) => {
+    res.render('dashboards/institute/topicpoll'); 
 });
 
 // Start server
@@ -83,7 +102,4 @@ app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
 
-// stud_detail
-app.get('/stud_detail', (req, res) => {
-    res.render('dashboards/institute/stud_detail'); 
-});
+

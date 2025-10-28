@@ -14,11 +14,11 @@ html, body {
 /* ======= Layout ======= */
 .main-container {
   max-width: 1200px;
-  margin: auto;
+  margin-top: 60px;
 }
 
 /* Sidebar (left fixed area) */
-.sidebar {
+/* .sidebar {
   width: 260px;
   flex-shrink: 0;
   height: 100vh;
@@ -27,13 +27,13 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
 
 
 
 .dashboard-container {
   flex-grow: 1;
-  padding: 1.5rem 2rem;
+  /* padding: 1.5rem 2rem; */
   height: calc(100vh - 60px);
   box-sizing: border-box;
   

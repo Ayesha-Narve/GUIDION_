@@ -10,8 +10,33 @@ body {
   background: #f6f8fc;
 }
 
-/* Sidebar */
+
+
+/* Sidebar styling */
 .sidebar {
+  position: fixed;
+  top: 60px; /* start below navbar */
+  left: 0;
+  width: 260px;
+  height: calc(100vh - 60px); /* take remaining height below navbar */
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  z-index: 100; /* below navbar */
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 260px; /* leave space for sidebar */
+  margin-top: 40px;   
+  padding: 20px;
+  background: #f6f8fc;
+  min-height: calc(100vh - 60px);
+}
+
+/* Sidebar */
+/* .sidebar {
   margin-top: 5rem;
   width: 260px;
   height: 100vh;
@@ -23,8 +48,9 @@ body {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 100;
   transition: all 0.3s;
-}
+} */
 
 .institute-info {
   text-align: center;
@@ -127,9 +153,3 @@ body {
   color: #ff4d4d;
 }
 
-/* Main content */
-/* .main-content {
-  margin-left: 260px;
-  padding: 40px;
-  flex-grow: 1;
-} */
