@@ -102,4 +102,13 @@ app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
 
+// stud_detail
+app.get('/stud-detail', (req, res) => {
+    res.render('dashboards/institute/stud_detail'); 
+});
+
+// schedule
+app.get('/schedule', (req, res) => {
+    res.render('dashboards/institute/schedule'); 
+});
 
