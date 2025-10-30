@@ -1,3 +1,4 @@
+
 body {
   font-family: "Poppins", sans-serif;
   background: #f8f9fa;
@@ -9,6 +10,10 @@ body {
 .container {
   max-width: 1200px;
   margin: auto;
+
+}
+.main-content {
+  margin-top: 60px!important;
 }
 
 .header-section {
@@ -19,7 +24,7 @@ body {
 }
 
 .title {
-  color: #007bff;
+  color: #000;
   font-weight: 600;
 }
 
@@ -62,11 +67,6 @@ body {
   color: #555;
 }
 
-/* Card Colors */
-.col .yellow { background-color: #e7d8a0; }
-.col .purple { background-color: #a67dcc; }
-.col .green  { background-color: #80d58d; }
-.col .blue   { background-color: #90aad4; }
 
 /* Section Cards */
 .card-section {

@@ -14,11 +14,11 @@ html, body {
 /* ======= Layout ======= */
 .main-container {
   max-width: 1200px;
-  margin: auto;
+  margin-top: 60px;
 }
 
 /* Sidebar (left fixed area) */
-.sidebar {
+/* .sidebar {
   width: 260px;
   flex-shrink: 0;
   height: 100vh;
@@ -27,13 +27,13 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
 
 
 
 .dashboard-container {
   flex-grow: 1;
-  padding: 1.5rem 2rem;
+  /* padding: 1.5rem 2rem; */
   height: calc(100vh - 60px);
   box-sizing: border-box;
   
@@ -47,13 +47,16 @@ html, body {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-bottom: 2rem;
+  
 }
+
 
 .stat-card {
   background: #fff;
+  border: 1px solid #d5cdcd;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(165, 163, 163, 0.05);  
   text-align: center;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -159,6 +162,11 @@ html, body {
   font-size: 1.1rem;
 }
 
+.main-content {
+  margin-left: 260px;
+  padding: 40px;
+  flex-grow: 1;
+}
 /* ======= Responsive Design ======= */
 @media (max-width: 1000px) {
   .stats-grid {

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Average Attendance - Guidion</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="page-container">
+ <%   const lectures = [
+  {
+    topic: "Introduction to Machine Learning",
+    date: "2025-10-01",
+    totalStudents: 120,
+    attended: 108,
+    attendancePercent: "90%"
+  },
+  {
+    topic: "Database Design & Normalization",
+    date: "2025-10-05",
+    totalStudents: 95,
+    attended: 85,
+    attendancePercent: "89%"
+  },
+  {
+    topic: "Software Engineering Principles",
+    date: "2025-10-10",
+    totalStudents: 110,
+    attended: 98,
+    attendancePercent: "89%"
+  },
+  {
+    topic: "Ethics in Artificial Intelligence",
+    date: "2025-10-15",
+    totalStudents: 105,
+    attended: 92,
+    attendancePercent: "88%"
+  },
+  {
+    topic: "Web Development Workshop",
+    date: "2025-10-20",
+    totalStudents: 130,
+    attended: 121,
+    attendancePercent: "93%"
+  }
+];
+%>
+    <header>
+      <h1>Completed Lectures & Attendance Overview</h1>
+      <a href="/dashboard" class="back-btn">← Back to Dashboard</a>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Lecture Topic</th>
+          <th>Date</th>
+          <th>Total Students</th>
+          <th>Attended</th>
+          <th>Attendance %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (lectures && lectures.length > 0) { %>
+          <% lectures.forEach(lecture => { %>
+            <tr>
+              <td><%= lecture.topic %></td>
+              <td><%= lecture.date %></td>
+              <td><%= lecture.totalStudents %></td>
+              <td><%= lecture.attended %></td>
+              <td><%= lecture.attendancePercent %></td>
+            </tr>
+          <% }) %>
+        <% } else { %>
+          <tr>
+            <td colspan="5">No lecture records available.</td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,48 +1,45 @@
-<% layout('/layouts/dashboard') %>
-
+<% layout("/layouts/dashboard.ejs") %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guidion Dashboard</title>
-  <link rel="stylesheet" href="/GUIDION_/public/css/sidebar.css">
+  <link rel="stylesheet" href="/css/institute/stud_detail.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
   <div class="dashboard-container">
-    <div class="sidebar-placeholder"></div>
+    
 
     <div class="main-content">
       <div class="header-section">
         <h2>Monitor student progress and records</h2>
-        <button class="add-btn">
-          <i class="fa-solid fa-user-plus"></i> Enroll Student
-        </button>
+        <button class="add-btn"><i class="fa-solid fa-user-plus"></i> Enroll Student</button>
       </div>
 
       <div class="stats-grid">
-        <a href="/students" class="card purple">
+        <a href="/inst_students" class="card purple">
           <div class="icon"><i class="fa-solid fa-user-graduate"></i></div>
-          <h3><%= totalStudents || '1,250' %></h3>
+          <h3><%= typeof totalStudents !== 'undefined' ? totalStudents : '1,250' %></h3>
           <p>Total Students</p>
         </a>
 
-        <a href="/attendance" class="card blue">
+        <a href="/stud_attendance" class="card blue">
           <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
-          <h3><%= attendance || '89.5%' %></h3>
+          <h3><%= typeof attendance !== 'undefined' ? attendance : '89.5%' %></h3>
           <p>Attendance</p>
         </a>
 
-        <a href="/rewards" class="card green">
+        <a href="/stud_rewards" class="card green">
           <div class="icon"><i class="fa-solid fa-award"></i></div>
-          <h3><%= rewards || '9.23' %></h3>
+          <h3><%= typeof rewards !== 'undefined' ? rewards : '9.23' %></h3>
           <p>Student Rewards</p>
         </a>
 
-        <a href="/topicpoll" class="card yellow">
+        <a href="/stud_topicpoll" class="card yellow">
           <div class="icon"><i class="fa-solid fa-comments"></i></div>
-          <h3><%= topicPolls || '30' %></h3>
+          <h3><%= typeof polls !== 'undefined' ? polls : '30' %></h3>
           <p>Topic Polls</p>
         </a>
       </div>
@@ -56,30 +53,31 @@
         <table>
           <thead>
             <tr>
-              <th>Complaint ID</th>
+              <th>Complaint ID </th>
               <th>Complaint Details</th>
               <th>Status</th>
             </tr>
           </thead>
           <tbody>
-            <% if (complaints && complaints.length > 0) { %>
-              <% complaints.forEach(complaint => { %>
-                <tr>
-                  <td><%= complaint.id %></td>
-                  <td><%= complaint.details %></td>
-                  <td><%= complaint.status %></td>
-                </tr>
-              <% }) %>
-            <% } else { %>
-              <tr>
-                <td colspan="3">No complaints found.</td>
-              </tr>
-            <% } %>
+            <tr>
+              <td>#A45F7C</td>
+              <td>Guest lecturer was not available on scheduled time.</td>
+              <td>Resolved</td>
+            </tr>
+            <tr>
+              <td>#B87D2E</td>
+              <td>Classroom projector not working properly.</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>#B87AF3E</td>
+              <td>Topic not understand.</td>
+              <td>Pending</td>
+            </tr>
           </tbody>
         </table>
       </div>
-    </div>
+    
   </div>
 </body>
 </html>
-

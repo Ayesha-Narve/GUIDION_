@@ -3,56 +3,56 @@ body {
   display: flex;
     flex-direction: column;
     min-height: 100vh;
+    scroll-behavior: smooth;
+    scrollbar-width: 100px;
 }
 
-/* 1. Define the Sidebar Width (This must be correct) */
-.sidebar {
-    width: 260px;
-    /* You likely still need position: fixed and a top/left setting 
-       on your sidebar for it to stay put and be full height. 
-       If it's already working, leave its CSS alone. */
+/* header {
+  position: fixed;      
+  top: 0;
+  left: 260px;          
+  width: calc(100% - 260px);  
+  height: 5rem;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 999;         
+  box-sizing: border-box;
+} */
+
+/* Navbar styling (if not already defined) */
+header .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* adjust as per your navbar height */
+  background: #57cca5; /* your theme color */
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 999; /* ensure navbar stays above sidebar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-/* 2. Style the Header (Navbar) to Offset and Constrain its Width */
-header {
-    /* Pushes the header element to the right, past the sidebar */
-    margin-left: 260px;
-    
-    /* Calculates the new width: 100% of the viewport minus the sidebar width */
-    width: calc(100% - 260px);
-    
-    /* Ensures padding/borders are included in the calculated width */
-    box-sizing: border-box; 
-    
-    /* If your navbar uses position: sticky/fixed, you must also apply the margin-left: */
-    /* top: 0; */ 
-    /* left: 260px; */ 
-    /* width: calc(100% - 260px); */
-}
-
-.footer {
-    /* Existing Styles are fine, but add the alignment rules: */
-    
-    /* Pushes the footer past the sidebar (260px) */
-    margin-left: 260px !important; 
-    
-    /* Constrains the total width to the remaining screen space */
-    width: calc(100% - 260px) !important; 
-    
-    box-sizing: border-box !important;
-    
-    /* ... rest of your existing footer styles ... */
-}
-
-
+/* .main-content {
+    margin-top: 3rem;
+} */
 .container {
     flex: 1;
-}
+} 
+
+
  /* navbar styling */
  .navbar {
-    width: 100%;
+    position: fixed;
+  z-index: 999; 
+    width: 100% !important;
     height: 5rem;
-    background-color: white;;
+    background-color: rgb(168, 62, 62);
  }
 
  .nav-link {
@@ -60,13 +60,15 @@ header {
 
 }
 .navbar-brand img {
-  height: 60px;
+  height: 50px;
   width: auto;
   margin-right: 8px;
+  margin-left: 650px;
   vertical-align: middle;
 }
 
 .navbar-brand {
+
   display: flex;
   align-items: center;
   font-weight: bold;

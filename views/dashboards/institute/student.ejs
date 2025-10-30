@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Total Students - Guidion</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <h1>Category Wise Courses & Student Count</h1>
+      <a href="/GUIDION_/views/dashboards/institute/stud_detail.ejs" class="back-btn">← Back to Dashboard</a>
+    </header>
+
+   <% const courses = [
+  {
+    name: "Computer Science Fundamentals",
+    department: "Computer Science",
+    students: 120
+  },
+  {
+    name: "Business Management",
+    department: "Management Studies",
+    students: 95
+  },
+  {
+    name: "Electrical Engineering",
+    department: "Engineering",
+    students: 78
+  },
+  {
+    name: "Psychology and Human Behavior",
+    department: "Humanities",
+    students: 64
+  },
+  {
+    name: "Data Analytics and AI",
+    department: "Information Technology",
+    students: 110
+  }
+];
+%>
+    <table>
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Department</th>
+          <th>Number of Students</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (courses && courses.length > 0) { %>
+          <% courses.forEach(course => { %>
+            <tr>
+              <td><%= course.name %></td>
+              <td><%= course.department %></td>
+              <td><%= course.students %></td>
+            </tr>
+          <% }) %>
+        <% } else { %>
+          <tr>
+            <td colspan="3">No course data available.</td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
