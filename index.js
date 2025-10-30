@@ -83,3 +83,9 @@ app.listen(PORT, () => {
 app.get('/stud-detail', (req, res) => {
     res.render('dashboards/institute/stud_detail'); 
 });
+
+// schedule
+app.get('/schedule', (req, res) => {
+    res.render('dashboards/institute/schedule'); 
+});
+
