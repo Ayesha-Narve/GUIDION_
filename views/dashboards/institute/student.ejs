@@ -4,43 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Total Students - Guidion</title>
-  <link rel="stylesheet" href="/style.css">
+  <!-- Correct CSS path -->
+  <link rel="stylesheet" href="/css/institute/stud_detail.css">
 </head>
 <body>
   <div class="page-container">
     <header>
       <h1>Category Wise Courses & Student Count</h1>
-      <a href="/GUIDION_/views/dashboards/institute/stud_detail.ejs" class="back-btn">← Back to Dashboard</a>
+      <a href="/stud_detail" class="back-btn">Back</a>
     </header>
 
-   <% const courses = [
-  {
-    name: "Computer Science Fundamentals",
-    department: "Computer Science",
-    students: 120
-  },
-  {
-    name: "Business Management",
-    department: "Management Studies",
-    students: 95
-  },
-  {
-    name: "Electrical Engineering",
-    department: "Engineering",
-    students: 78
-  },
-  {
-    name: "Psychology and Human Behavior",
-    department: "Humanities",
-    students: 64
-  },
-  {
-    name: "Data Analytics and AI",
-    department: "Information Technology",
-    students: 110
-  }
-];
-%>
+    <% 
+      const courses = [
+        { name: "BSc Computer Science", department: "Computer Science", students: 420 },
+        { name: "BSc Cyber Security", department: "Cyber Security", students: 310 },
+        { name: "BSc AI & ML", department: "Artificial Intelligence", students: 260 },
+        { name: "BSc Data Science", department: "Data Science", students: 260 },
+        { name: "MSc Computer Science", department: "Computer Science", students: 420 },
+        { name: "MSc Cyber Security", department: "Cyber Security", students: 456 },
+        { name: "MSc AI & ML", department: "Artificial Intelligence", students: 280 },
+        { name: "MSc Data Science", department: "Data Science", students: 300 }
+      ];
+    %>
+
     <table>
       <thead>
         <tr>

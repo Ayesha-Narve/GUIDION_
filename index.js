@@ -85,11 +85,11 @@ app.get('/inst_students', (req, res) => {
 app.get('/stud_attendance', (req, res) => {
     res.render('dashboards/institute/attendance'); 
 });
-
-// instituite stud_detail in student reward section
+// instituite stud_detail in rewards section
 app.get('/stud_rewards', (req, res) => {
-    res.render('dashboards/institute/stud_rewards'); 
+    res.render('dashboards/institute/stud_rewards');
 });
+
 
 // instituite stud_detail in topic poll section
 app.get('/stud_topicpoll', (req, res) => {
