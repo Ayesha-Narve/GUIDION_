@@ -1,0 +1,111 @@
+<% layout("/layouts/dashboard.ejs") %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule - EduConnect+</title>
+
+  <!-- point to your CSS file (or change to /css/schedule.css if needed) -->
+  <link rel="stylesheet" href="/css/schedule.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <% 
+    // Manually stored data array (inside the EJS file)
+    const schedules = [
+      {
+        department: "Computer Science",
+        lecturer: "Dr. Sarah Johnson",
+        date: "05.06.2025",
+        time: "09:00 - 11:00",
+        topic: "Data Structure"
+      },
+      {
+        department: "Information Technology (IT)",
+        lecturer: "Prof. Mike Chen",
+        date: "06.06.2025",
+        time: "11:30 - 13:30",
+        topic: "Database Management Systems"
+      },
+      {
+        department: "Electronics",
+        lecturer: "Dr. Emily White",
+        date: "07.06.2025",
+        time: "14:00 - 16:00",
+        topic: "Microprocessors and Microcontrollers"
+      },
+      {
+        department: "Mechanical Engineering (ME)",
+        lecturer: "Dr. Sarah Johnson",
+        date: "08.06.2025",
+        time: "09:00 - 11:00",
+        topic: "Heat and Mass Transfer"
+      },
+      {
+        department: "Civil Engineering (CE)",
+        lecturer: "Prof. Mike Chen",
+        date: "09.06.2025",
+        time: "14:00 - 16:00",
+        topic: "Structural Analysis"
+      }
+    ];
+  %>
+
+  <div class="schedule-section">
+    <div class="top-header">
+      <h2>Manage class schedules and timetables</h2>
+      <button class="add-btn">+ Add Schedule</button>
+    </div>
+
+    <div class="search-filter">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search courses...">
+      </div>
+      <button class="filter-btn"><i class="fas fa-filter"></i> Filter</button>
+    </div>
+
+    <div class="schedule-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th>Lecturer</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Topic</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% if (schedules && schedules.length) { %>
+            <% schedules.forEach(item => { %>
+              <tr>
+                <td><%= item.department %></td>
+                <td><%= item.lecturer %></td>
+                <td><%= item.date %></td>
+                <td><%= item.time %></td>
+                <td><%= item.topic %></td>
+                <td class="actions">
+                  <button class="icon-btn edit"><i class="fa-solid fa-pen"></i></button>
+                  <button class="icon-btn delete"><i class="fa-solid fa-trash"></i></button>
+                </td>
+              </tr>
+            <% }) %>
+          <% } else { %>
+            <tr>
+              <td colspan="6" style="text-align:center; color:#888;">No schedules available</td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
