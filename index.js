@@ -68,6 +68,11 @@ app.get('/sidebar', (req, res) => {
 app.get('/reward', (req, res) => {
     res.render('dashboards/institute/reward'); 
 });
+
+// Analytics
+app.get('/analytics', (req, res) => {
+    res.render('\dashboards\institute\analytics'); 
+});
 // Lect_detail
 app.get('/lect-detail', (req, res) => {
     res.render('dashboards/institute/lect_detail'); 
