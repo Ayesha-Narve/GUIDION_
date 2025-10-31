@@ -68,6 +68,11 @@ app.get('/sidebar', (req, res) => {
 app.get('/reward', (req, res) => {
     res.render('dashboards/institute/reward'); 
 });
+
+// Analytics
+app.get('/analytics', (req, res) => {
+    res.render('\dashboards\institute\analytics'); 
+});
 // Lect_detail
 app.get('/lect-detail', (req, res) => {
     res.render('dashboards/institute/lect_detail'); 
@@ -102,4 +107,13 @@ app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
 
+// stud_detail
+app.get('/stud-detail', (req, res) => {
+    res.render('dashboards/institute/stud_detail'); 
+});
+
+// schedule
+app.get('/schedule', (req, res) => {
+    res.render('dashboards/institute/schedule'); 
+});
 

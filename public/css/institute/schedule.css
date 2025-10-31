@@ -1,0 +1,162 @@
+/* ===== Global Styles ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f7fafd;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ===== Schedule Section (beside sidebar) ===== */
+.schedule-section {
+  margin-left: 270px;    /* keep this space for your sidebar */
+  padding: 30px 40px;
+}
+
+/* ===== Header ===== */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.top-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.add-btn {
+  background: linear-gradient(90deg, #00b894, #00e676);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #0043cc;
+}
+
+/* ===== Search and Filter ===== */
+.search-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+  width: 95%;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-box i {
+  color: #888;
+  margin-right: 10px;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.filter-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-btn:hover {
+  background: #f1f1f1;
+}
+.main-content {
+    margin-left: 0 !important;
+}
+/* ===== Table Section ===== */
+.schedule-table {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  overflow: hidden;
+  width: 95%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 14px 20px;
+  text-align: left;
+}
+
+th {
+  background: #f9f9f9;
+  color: #555;
+  font-size: 14px;
+}
+
+td {
+  border-top: 1px solid #eee;
+  font-size: 14px;
+}
+
+.room-tag {
+  background: #e8f0ff;
+  color: #005cff;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+/* ===== Action Icons ===== */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.icon-btn.edit {
+  color: #005cff;
+}
+
+.icon-btn.delete {
+  color: #e74c3c;
+}
+
+.icon-btn:hover {
+  opacity: 0.7;
+}
+
+/* ===== Row Hover Effect ===== */
+tbody tr:hover {
+  background: #f8fbff;
+}

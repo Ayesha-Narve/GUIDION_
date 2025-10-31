@@ -69,34 +69,48 @@ body {
   padding: 30px 40px;
 } */
 
-/* ===== Header Section ===== */
-/* .header-section {
+/*===== Header Section ===== */
+ .header-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* heading left, button right */
   align-items: center;
-  margin-bottom: 25px;
-} */
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 6px 4px;
+}
 
-/* .header-section h2 {
-  font-size: 22px;
-  color: #333;
+.header-section h2 {
+  font-size: 28px;
   font-weight: 600;
-} */
+  color: #243240;
+  margin: 0;
+}
 
+/* ---------- Enroll Button (matches your screenshot) ---------- */
 .add-btn {
-  background: #00b894;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 10px;
+  background: linear-gradient(90deg, #00b894, #00e676); 
+  color: #fff;             /* white text */
   border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
   cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s ease;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 12px rgba(0, 194, 149, 0.18);
+  transition: background-color 0.18s ease, transform 0.12s ease;
+}
+
+.add-btn i {
+  font-size: 18px;
+  line-height: 1;
 }
 
 .add-btn:hover {
-  background: #019870;
-  box-shadow: 0 4px 8px rgba(0, 184, 148, 0.3);
+  background-color: #00a77e;   /* slightly darker on hover */
+  transform: translateY(-2px);
 }
 
 /* ===== Stats Cards ===== */

@@ -51,8 +51,8 @@ header .navbar {
     position: fixed;
   z-index: 999; 
     width: 100% !important;
-    height: 5rem;
-    background-color: rgb(168, 62, 62);
+    height: 60px;
+    background-color: #57cca5;
  }
 
  .nav-link {
@@ -73,6 +73,10 @@ header .navbar {
   align-items: center;
   font-weight: bold;
   font-size: 1.3rem;
+}
+.help {
+  border-radius: 50% !important;
+  margin-left: 10px !important;
 }
 
 /* Responsive */
