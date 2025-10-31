@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sidebar</title>
-  <link rel="stylesheet" href="/css/sidebar.css">
+  <link rel="stylesheet" href="/css/institute/sidebar.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
@@ -23,11 +23,11 @@
 
     <!-- Menu items -->
     <nav class="menu">
-      <a href="/schedule" class="active"><i class="ri-calendar-line"></i> Schedule</a>
-      <a href="/lect-detail"><i class="ri-user-3-line"></i> Lecturer Details</a>
-      <a href="/stud_detail"><i class="ri-graduation-cap-line"></i> Students Details</a>
-      <a href="/analytics"><i class="ri-bar-chart-2-line"></i> Analytics</a>
-      <a href="/reward"><i class="ri-award-line"></i> Rewards</a>
+      <a href="/schedule" data-page="schedule">><i class="ri-calendar-line"></i> Schedule</a>
+      <a href="/lect-detail" data-page="/lect-detail">><i class="ri-user-3-line"></i> Lecturer Details</a>
+      <a href="/stud_detail" data-page="/stud_detai">><i class="ri-graduation-cap-line"></i> Students Details</a>
+      <a href="/analytics" data-page="/analytics">><i class="ri-bar-chart-2-line"></i> Analytics</a>
+      <a href="/reward" data-page="/reward">><i class="ri-award-line"></i> Rewards</a>
     </nav>
 
     <!-- Logout -->
@@ -42,14 +42,90 @@
   </div> -->
 
   <script>
-    // JS to handle click active effect
-    const links = document.querySelectorAll('.menu a');
+ // public/js/sidebar.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const links = Array.from(document.querySelectorAll('.menu a'));
+
+  if (!links.length) return;
+
+  // Normalize a pathname: remove query/hash, trim trailing slash and leading slash
+  function normalizePath(pathname) {
+    // remove query and hash
+    let p = pathname.split('?')[0].split('#')[0];
+    // ensure it's a string
+    p = p == null ? '' : String(p);
+    // remove trailing slash (but keep root "/")
+    if (p.length > 1 && p.endsWith('/')) p = p.slice(0, -1);
+    // remove leading slash for easier comparison
+    if (p.startsWith('/')) p = p.slice(1);
+    return p;
+  }
+
+  // Set active class based on a normalized key (either data-page or normalized pathname)
+  function setActiveByKey(key) {
     links.forEach(link => {
-      link.addEventListener('click', () => {
-        links.forEach(item => item.classList.remove('active'));
+      // derive a link key: prefer data-page if present, else use normalized href pathname
+      const linkHrefPath = new URL(link.href, window.location.origin).pathname;
+      const linkKey = link.dataset.page ? String(link.dataset.page) : normalizePath(linkHrefPath);
+      if (linkKey === key) {
         link.classList.add('active');
-      });
+      } else {
+        link.classList.remove('active');
+      }
     });
+  }
+
+  // 1) Try to activate based on the actual current URL path (most robust)
+  const currentPathKey = normalizePath(window.location.pathname);
+
+  // Determine which menu links correspond to valid pages and map their keys
+  const validLinkKeys = links.map(link => {
+    const linkHrefPath = new URL(link.href, window.location.origin).pathname;
+    return link.dataset.page ? String(link.dataset.page) : normalizePath(linkHrefPath);
+  });
+
+  // If the URL path matches a link -> use it and persist
+  if (validLinkKeys.includes(currentPathKey)) {
+    setActiveByKey(currentPathKey);
+    localStorage.setItem('activePage', currentPathKey);
+  } else {
+    // else try localStorage (persisted last-clicked)
+    const saved = localStorage.getItem('activePage');
+    const fallback = saved && validLinkKeys.includes(saved) ? saved : 'schedule';
+    setActiveByKey(fallback);
+    // Persist fallback if it wasn't present
+    localStorage.setItem('activePage', fallback);
+  }
+
+  // 2) Click handling: prevent racing by saving state first, updating UI, then navigating
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      // Only handle left-click without modifier keys
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+      e.preventDefault();
+
+      const linkHrefPath = new URL(link.href, window.location.origin).pathname;
+      const linkKey = link.dataset.page ? String(link.dataset.page) : normalizePath(linkHrefPath);
+
+      // persist active page
+      try {
+        localStorage.setItem('activePage', linkKey);
+      } catch (err) {
+        // ignore localStorage errors (e.g. privacy mode) but continue
+        console.warn('Could not write activePage to localStorage', err);
+      }
+
+      // update UI immediately
+      setActiveByKey(linkKey);
+
+      // then navigate
+      window.location.href = link.href;
+    });
+  });
+});
+
   </script>
 
 </body>
