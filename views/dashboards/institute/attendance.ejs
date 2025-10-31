@@ -4,52 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Average Attendance - Guidion</title>
-  <link rel="stylesheet" href="/style.css">
+  <!-- Correct CSS path -->
+  <link rel="stylesheet" href="/css/institute/stud_detail.css">
 </head>
 <body>
   <div class="page-container">
- <%   const lectures = [
-  {
-    topic: "Introduction to Machine Learning",
-    date: "2025-10-01",
-    totalStudents: 120,
-    attended: 108,
-    attendancePercent: "90%"
-  },
-  {
-    topic: "Database Design & Normalization",
-    date: "2025-10-05",
-    totalStudents: 95,
-    attended: 85,
-    attendancePercent: "89%"
-  },
-  {
-    topic: "Software Engineering Principles",
-    date: "2025-10-10",
-    totalStudents: 110,
-    attended: 98,
-    attendancePercent: "89%"
-  },
-  {
-    topic: "Ethics in Artificial Intelligence",
-    date: "2025-10-15",
-    totalStudents: 105,
-    attended: 92,
-    attendancePercent: "88%"
-  },
-  {
-    topic: "Web Development Workshop",
-    date: "2025-10-20",
-    totalStudents: 130,
-    attended: 121,
-    attendancePercent: "93%"
-  }
-];
-%>
     <header>
       <h1>Completed Lectures & Attendance Overview</h1>
-      <a href="/dashboard" class="back-btn">← Back to Dashboard</a>
+      <!-- Fixed back link to go to the main dashboard route -->
+      <a href="/stud_detail" class="back-btn"> Back </a>
     </header>
+
+    <% 
+      const lectures = [
+        { topic: "Introduction to Python", date: "10 Oct 2025", totalStudents: 120, attended: 110, attendancePercent: "91.6%" },
+        { topic: "Data Structures", date: "14 Oct 2025", totalStudents: 130, attended: 118, attendancePercent: "90.7%" },
+        { topic: "Web Development Basics", date: "20 Oct 2025", totalStudents: 115, attended: 109, attendancePercent: "94.7%" }
+      ];
+    %>
 
     <table>
       <thead>

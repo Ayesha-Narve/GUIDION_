@@ -1,78 +1,81 @@
-
-
-  <div class="page-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TopicTalks</title>
+  <link rel="stylesheet" href="/css/stud_detail.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <div class="poll-container">
     <header>
-      <h1><i class="fa-solid fa-comments"></i> Topic Polls</h1>
-      <a href="/GUIDION_/views/dashboards/institute/studdetail.ejs" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</a>
-    </header>
-<% const topics = [
-  "Artificial Intelligence and Machine Learning",
-  "Cybersecurity and Data Privacy",
-  "Blockchain Technology",
-  "Web Development Trends",
-  "Cloud Computing and DevOps",
-  "Internet of Things (IoT)",
-  "UI/UX Design Principles",
-  "Digital Marketing Strategies",
-  "Entrepreneurship and Startups",
-  "Sustainable Technology Innovations"
-];
-%>
+      <h1><i class="fa-solid fa-clipboard-list"></i> Topic Poll</h1>
+   <a href="/stud_detail" class="back-btn"><i class="fa-solid fa-arrow-left"></i>Back</a>
+     </header>
+ <p>Select your department and add a topic of your choice for the lecturer.</p>
+ <br>
+    <!-- Department Selection -->
+    <section class="department-section">
+      <label for="department">Choose Department:</label>
+      <select id="department">
+        <option value="">-- Select Department --</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Information Technology">Information Technology</option>
+        <option value="Data Science">Data Science</option>
+        <option value="Artificial Intelligence">Artificial Intelligence</option>
+        <option value="Machine Learning">Machine Learning</option>
+        <option value="Cyber Security">Cyber Security</option>
+      </select>
+    </section>
 
-    <section class="polls">
-      <h2>Select the Topics You’re Interested In</h2>
+    <!-- Add Topic Section -->
+    <section class="add-topic-section">
+      <h2>Add Your Own Topic (For Lecturer)</h2>
+      <div class="add-topic-box">
+        <input type="text" placeholder="Enter topic name here...">
+        <button><i class="fa-solid fa-plus"></i> Add</button>
+      </div>
+    </section>
 
-      <form id="topicForm">
-        <div class="checkbox-group">
-          <% if (topics && topics.length > 0) { %>
-            <% topics.forEach(topic => { %>
-              <label>
-                <input type="checkbox" name="topic" value="<%= topic %>"> <%= topic %>
-              </label>
+    <!-- Student Responses -->
+    <section class="response-section">
+      <h2>Students' Topic Responses</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Sr. No</th>
+              <th>Student Name</th>
+              <th>Department</th>
+              <th>Selected Topics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% 
+              // If students variable is not passed from server, define it here
+              const studentList = typeof students !== 'undefined' ? students : [
+                { name: 'Sakshi', department: 'Computer Science', topics: ['Web Development', 'Artificial Intelligence', 'Cloud Computing'] },
+                { name: 'Ananya', department: 'Information Technology', topics: ['Cyber Security', 'Data Science'] },
+                { name: 'Rahul', department: 'Data Science', topics: ['Machine Learning', 'Neural Networks'] },
+                { name: 'Vikas', department: 'Cyber Security', topics: ['Ethical Hacking', 'Network Security'] },
+                { name: 'Priya', department: 'Artificial Intelligence', topics: ['Deep Learning', 'Image Recognition'] }
+              ];
+            %>
+
+            <% studentList.forEach((student, index) => { %>
+              <tr>
+                <td><%= index + 1 %></td>
+                <td><%= student.name %></td>
+                <td><%= student.department %></td>
+                <td><%= student.topics.join(", ") %></td>
+              </tr>
             <% }) %>
-          <% } else { %>
-            <p>No topics available.</p>
-          <% } %>
-        </div>
-
-        <h3>Other (Add Your Own Topic)</h3>
-        <br>
-        <div class="add-topic">
-          <input type="text" id="customTopic" placeholder="Type your topic here...">
-          <button type="button" id="addTopicBtn">
-            <i class="fa-solid fa-plus"></i> Add
-          </button>
-        </div>
-
-        <div id="customTopicList"></div>
-
-        <button type="submit" class="submit-btn">Submit Topics</button>
-      </form>
+          </tbody>
+        </table>
+      </div>
     </section>
   </div>
-
-  <script>
-    const addBtn = document.getElementById("addTopicBtn");
-    const topicList = document.getElementById("customTopicList");
-    const input = document.getElementById("customTopic");
-
-    addBtn.addEventListener("click", () => {
-      const topic = input.value.trim();
-      if (topic) {
-        const label = document.createElement("label");
-        label.innerHTML = `<input type="checkbox" name="topic" value="${topic}"> ${topic}`;
-        topicList.appendChild(label);
-        input.value = "";
-      }
-    });
-
-    document.getElementById("topicForm").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const selected = Array.from(document.querySelectorAll('input[name="topic"]:checked')).map(t => t.value);
-      if (selected.length > 0) {
-        alert("You selected: " + selected.join(", "));
-      } else {
-        alert("Please select at least one topic.");
-      }
-    });
-  </script>
+</body>
+</html>

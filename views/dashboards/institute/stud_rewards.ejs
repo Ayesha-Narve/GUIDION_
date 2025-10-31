@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Rewards - Guidion</title>
+  <!-- Correct CSS and icons -->
+  <link rel="stylesheet" href="/css/institute/stud_detail.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <div class="page-container">
+    <header>
+      <h1><i class="fa-solid fa-award"></i> Student Rewards</h1>
+      
+      <a href="/stud_detail" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</a>
+    </header>
+
+    <div class="rewards-section">
+      <h2>🎓 Eligible Students for Rewards</h2>
+      <p class="subtitle">Students with excellent attendance and performance can claim their rewards.</p>
+
+      <% 
+        const students = [
+          { name: "Sakshi Kunde", course: "BSc Computer Science", attendance: "95%", performance: "A+" },
+          { name: "Riya Patil", course: "BSc Data Science", attendance: "92%", performance: "A" },
+          { name: "Aditya Sharma", course: "BSc AI & ML", attendance: "94%", performance: "A+" }
+        ];
+      %>
+
+      <table class="rewards-table">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Course</th>
+            <th>Attendance</th>
+            <th>Performance</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (students && students.length > 0) { %>
+            <% students.forEach(student => { %>
+              <tr>
+                <td><%= student.name %></td>
+                <td><%= student.course %></td>
+                <td><%= student.attendance %></td>
+                <td><%= student.performance %></td>
+                <td>
+                  <button class="claim-btn">
+                    <i class="fa-solid fa-gift"></i> Claim
+                  </button>
+                </td>
+              </tr>
+            <% }) %>
+          <% } else { %>
+            <tr>
+              <td colspan="5">No eligible students found.</td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
+

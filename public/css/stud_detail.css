@@ -12,28 +12,23 @@ body {
 }
 
 /* ===== Layout ===== */
-/* .dashboard-container {
+.dashboard-container {
   display: flex;
   min-height: 100vh;
-} */
-.main-content {
-  margin-left: 140px !important;
-  margin-top: 20px !important;
-  flex-grow: 1;
 }
 
 /* ===== Sidebar ===== */
-/* .sidebar-placeholder {
-  width: 250px; */
+.sidebar-placeholder {
+  width: 250px;
   /* background: linear-gradient(180deg, #00b894, #00cec9);
   color: white;
   display: flex;
   flex-direction: column;
   padding: 25px 15px;
   border-top-right-radius: 20px; */
-/* } */
+}
 
-/* .sidebar-placeholder h2 {
+.sidebar-placeholder h2 {
   font-size: 20px;
   margin-bottom: 25px;
   text-align: center;
@@ -42,9 +37,9 @@ body {
 .sidebar-placeholder ul {
   list-style: none;
   padding: 0;
-} */
+}
 
-/* .sidebar-placeholder li {
+.sidebar-placeholder li {
   margin: 18px 0;
   font-size: 16px;
   display: flex;
@@ -61,56 +56,44 @@ body {
 .sidebar-placeholder li:hover {
   color: #fff;
   transform: translateX(5px);
-} */
+}
 
 /* ===== Main Content ===== */
-/* .main-content {
+.main-content {
   flex: 1;
   padding: 30px 40px;
-} */
+}
 
-/*===== Header Section ===== */
- .header-section {
+/* ===== Header Section ===== */
+.header-section {
   display: flex;
-  justify-content: space-between; /* heading left, button right */
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 20px;
-  padding: 6px 4px;
+  justify-content: space-between; /* places heading left, button right */
+  align-items: center;            /* keeps them vertically aligned */
+  padding: 10px 20px;
 }
 
 .header-section h2 {
-  font-size: 28px;
-  font-weight: 600;
-  color: #243240;
+  font-size: 24px;
+  color: #333;
   margin: 0;
 }
 
-/* ---------- Enroll Button (matches your screenshot) ---------- */
 .add-btn {
-  background: linear-gradient(90deg, #00b894, #00e676); 
-  color: #fff;             /* white text */
+  background: linear-gradient(90deg, #00b894, #00e676);
+  color: #fff;
   border: none;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  font-weight: 600;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 10px;
-  box-shadow: 0 6px 12px rgba(0, 194, 149, 0.18);
-  transition: background-color 0.18s ease, transform 0.12s ease;
-}
-
-.add-btn i {
-  font-size: 18px;
-  line-height: 1;
+  gap: 8px;
+  transition: 0.3s ease;
 }
 
 .add-btn:hover {
-  background-color: #00a77e;   /* slightly darker on hover */
-  transform: translateY(-2px);
+  background-color: #00a77e; /* darker green on hover */
 }
 
 /* ===== Stats Cards ===== */
@@ -422,104 +405,185 @@ tbody tr:last-child td {
   color: #00b894;
 }
 
-/* ===== Topic Polls Section ===== */
-.polls {
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.polls h2 {
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  padding: 40px;
+}
+
+/* ===== Poll Container ===== */
+.poll-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 26px;
+  color: #00b894;
+  margin-bottom: 10px;
+}
+
+header i {
+  margin-right: 8px;
+}
+
+header p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* ===== Department Section ===== */
+.department-section {
+  margin-bottom: 30px;
+}
+
+.department-section label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.department-section select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.department-section select:focus {
+  border-color: #00b894;
+  box-shadow: 0 0 5px rgba(0, 184, 148, 0.4);
+}
+
+/* ===== Add Topic Section ===== */
+.add-topic-section {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 35px;
+  border-left: 4px solid #00b894;
+}
+
+.add-topic-section h2 {
+  font-size: 18px;
+  color: #00b894;
+  margin-bottom: 15px;
+}
+
+.add-topic-box {
+  display: flex;
+  gap: 10px;
+}
+
+.add-topic-box input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.add-topic-box input:focus {
+  border-color: #00b894;
+}
+
+.add-topic-box button {
+  background: #00b894;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.add-topic-box button:hover {
+  background: #019d7a;
+}
+
+/* ===== Response Table ===== */
+.response-section h2 {
   font-size: 20px;
   color: #00b894;
   margin-bottom: 20px;
 }
 
-.checkbox-group {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 12px;
-  margin-bottom: 25px;
+.table-container {
+  overflow-x: auto;
 }
 
-.checkbox-group label {
-  background: #f9fafb;
-  border: 1px solid #ddd;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
-.checkbox-group label:hover {
-  background: #e6fff5;
-  border-color: #00b894;
-}
-
-.add-topic {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.add-topic input {
-  flex: 1;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  outline: none;
-  transition: 0.3s;
-}
-
-.add-topic input:focus {
-  border-color: #00b894;
-  box-shadow: 0 0 5px rgba(0, 184, 148, 0.3);
-}
-
-.add-topic button {
+thead {
   background: #00b894;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
+  color: #fff;
+}
+
+thead th {
+  text-align: left;
+  padding: 12px 15px;
+  font-weight: 600;
+}
+
+tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background: #f8fdfb;
   transition: 0.3s;
 }
 
-.add-topic button:hover {
-  background: #019870;
-  box-shadow: 0 3px 8px rgba(0, 184, 148, 0.3);
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .poll-container {
+    padding: 25px 20px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  .add-topic-box {
+    flex-direction: column;
+  }
+
+  .add-topic-box button {
+    width: 100%;
+  }
 }
-
-#customTopicList label {
-  display: block;
-  background: #f1f5f9;
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.submit-btn {
-  background: #00b894;
-  color: white;
-  border: none;
-  padding: 12px 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.submit-btn:hover {
-  background: #019870;
-  box-shadow: 0 4px 10px rgba(0, 184, 148, 0.3);
-}
-
-
 
 /* ===== Rewards Section ===== */
 .rewards-section {
